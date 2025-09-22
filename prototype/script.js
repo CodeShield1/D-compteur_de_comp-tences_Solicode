@@ -9,5 +9,7 @@ for (let i = 0   ;  i < codes.length   ; i++) {
     compteur++;
   }
 }
+console.log("Le code", codeChoiser, "apparait", compteur, "fois.");
 }
+
 afficherMessage();
