@@ -10,21 +10,24 @@ const competense = [
   { nom: "Optimisation pour les moteurs de recherche", code: "C8" },
 ];
 let score = 0;
+let round=8;
+for (let i = 0; i < round; i++) {
+  
+let randomIndex = Math.floor(Math.random() * competense.length);
+ 
 
-for (let i = 0; i < competense.length; i++) {
+  let reponse = prompt("Entrez le code de : " + competense[randomIndex].nom);
 
-  let reponse = prompt("Entrez le code de : " + competense[i].nom);
-
-  if (reponse === competense[i].code) {
-    console.log("good"+competense[i].nom);
+  if (reponse === competense[randomIndex].code) {
+    console.log("good"+competense[randomIndex].nom);
     score++;
-    console.log("votre score est de : " + "8" +"/" +score);
+    console.log("votre score est de : " +score +"/8"  );
   } else {
-    console.log("bad");
+    console.log("bad" +competense[randomIndex].nom);
   }
   
 }
-console.log("votre score final est de : " + score +"/" + "8");
+console.log("votre score final est de : " + score  + "/8");
 
 
 
@@ -32,4 +35,5 @@ console.log("votre score final est de : " + score +"/" + "8");
 
 
 
+ 
 
